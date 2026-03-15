@@ -6,18 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Web GraphViz</title>
 	<meta name="description" content="Web GraphViz llows you to draw pretty diagrams using the Dot definition language.">
-	<meta http-equiv="Content-Security-Policy"
-		content="
-		media-src 'self' data: blob:;
-		script-src 'self' 'unsafe-inline';
-		style-src 'self' 'unsafe-inline';
-		connect-src 'self' greeky.report-uri.com;
-		default-src 'self';
-		upgrade-insecure-requests">
 	<script type="text/json" id="csp-report-uri">
 	{"keys" : ["blockedURI", "columnNumber", "disposition", "documentURI", "effectiveDirective", "lineNumber", "originalPolicy", "referrer", "sample", "sourceFile", "statusCode", "violatedDirective"],
 	"reportUri" : "https://greeky.report-uri.com/r/d/csp/enforce"}
 	</script>
+	<script defer src="./jquery-4.0.0.min.js"></script>
+	<script defer src="./viz.js"></script>
+	<script defer src="./site.js"></script>
   </head>
 <body>
 	<noscript>This webpage will not work correctly without <a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a>. Please turn Javascript on in your internet browser.</noscript>
@@ -54,11 +49,6 @@ digraph G {
 </div>
 </body>
 
-<!-- Defer loading of javascript by placing these tags at the tail end of the document -->
-<script language="javascript" type="text/javascript" src="./jquery-4.0.0.min.js"> </script>
-<script language="javascript" type="text/javascript" src="./viz.js"></script>
-<script language="javascript" type="text/javascript" src="./site.js"> </script>
-
 <script type="bogus" id="sample1_text">
 digraph G {
 
@@ -89,7 +79,7 @@ digraph G {
 }
 </script>
 
-<!------------------------------------------------------------------>
+<!-- -->
 
 <script type="bogus" id="sample2_text">
 digraph "unix" {
@@ -198,7 +188,7 @@ digraph "unix" {
 }
 </script>
 
-<!------------------------------------------------------------------>
+<!-- -->
 
 <script type="bogus" id="sample3_text">
 digraph prof {
@@ -353,7 +343,7 @@ term [color="0.650 0.200 1.000"];
 }
 </script>
 
-<!------------------------------------------------------------------>
+<!-- -->
 
 <script type="bogus" id="sample4_text">
 digraph finite_state_machine {
@@ -378,7 +368,7 @@ digraph finite_state_machine {
 }
 </script>
 
-<!------------------------------------------------------------------>
+<!-- -->
 
 <script type="bogus" id="sample5_text">
 digraph g{
