@@ -62,21 +62,26 @@ jQuery(document).ready(function () {
 
   sample_1_btn.click(function () {
     InsertGraphvizText(jQuery("#sample1_text").html().trim());
+    generate_btn.click(UpdateGraphviz);
   });
 
   sample_2_btn.click(function () {
     InsertGraphvizText(jQuery("#sample2_text").html().trim());
+    generate_btn.click(UpdateGraphviz);
   });
 
   sample_3_btn.click(function () {
     InsertGraphvizText(jQuery("#sample3_text").html().trim());
+    generate_btn.click(UpdateGraphviz);
   });
 
   sample_4_btn.click(function () {
     InsertGraphvizText(jQuery("#sample4_text").html().trim());
+    generate_btn.click(UpdateGraphviz);
   });
 
   sample_5_btn.click(function () {
     InsertGraphvizText(jQuery("#sample5_text").html().trim());
+    generate_btn.click(UpdateGraphviz);
   });
 });
