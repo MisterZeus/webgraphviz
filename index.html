@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Webgraphviz</title>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web GraphViz</title>
+	<meta name="description" content="Web GraphViz llows you to draw pretty diagrams using the Dot definition language.">
+	<meta http-equiv="Content-Security-Policy"
+		content="
+		media-src 'self' data: blob:;
+		script-src 'self' 'unsafe-inline';
+		style-src 'self' 'unsafe-inline';
+		connect-src 'self' greeky.report-uri.com;
+		default-src 'self';
+		upgrade-insecure-requests">
+	<script type="text/json" id="csp-report-uri">
+	{"keys" : ["blockedURI", "columnNumber", "disposition", "documentURI", "effectiveDirective", "lineNumber", "originalPolicy", "referrer", "sample", "sourceFile", "statusCode", "violatedDirective"],
+	"reportUri" : "https://greeky.report-uri.com/r/d/csp/enforce"}
+	</script>
   </head>
 <body>
-
-<style>
-  button { margin:4px; cursor:pointer; font-size: 70%; font-family: arial,sans-serif; margin-right: 5px }
-</style>
-
-<h2>WebGraphviz is <a href="https://www.graphviz.org/">Graphviz</a> in the Browser</h2>
-Enter your graphviz data into the Text Area:
+	<noscript>This webpage will not work correctly without <a href="https://en.wikipedia.org/wiki/JavaScript">Javascript</a>. Please turn Javascript on in your internet browser.</noscript>
+<h2>WebGraphviz is <a href="https://www.graphviz.org/">Graphviz</a> in your browser.</h2>
+<p>Enter your graphviz data into the Text Area:</p>
 <p style="font-size:75%">(Your Graphviz data is private and never harvested)</p>
 
 <button id="sample_1_btn" disabled>Sample 1</button>
@@ -19,8 +30,13 @@ Enter your graphviz data into the Text Area:
 <button id="sample_3_btn" disabled>Sample 3</button>
 <button id="sample_4_btn" disabled>Sample 4</button>
 <button id="sample_5_btn" disabled>Sample 5</button>
+
+<style>
+  button { margin:4px; cursor:pointer; font-size: 70%; font-family: arial,sans-serif; margin-right: 5px }
+</style>
+	
 <br>
-<textarea id="graphviz_data" rows="20" cols="80" width="100%" wrap="off">
+<textarea id="graphviz_data">
 digraph G {
   "Welcome" -> "To"
   "To" -> "Web"
@@ -36,7 +52,6 @@ digraph G {
 <div id="graphviz_svg_div">
   <!-- Target for dynamic svg generation -->
 </div>
-
 </body>
 
 <!-- Defer loading of javascript by placing these tags at the tail end of the document -->
