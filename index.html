@@ -31,7 +31,7 @@
 </style>
 	
 <br>
-<textarea id="graphviz_data" rows="30" cols="100">
+<textarea id="graphviz_data" rows="25" cols="100">
 digraph G {
   "Welcome" -> "To"
   "To" -> "Web"
@@ -40,8 +40,8 @@ digraph G {
 </textarea>
 <p>
 
-<button id="generate_btn" disabled style="font-size: 120%"><b>Loading...</b>
-<!-- The "update"  -->
+<button id="generate_btn" disabled style="font-size: 120%">
+	<b>Loading...</b>
 </button>
 
 <div id="graphviz_svg_div">
@@ -51,7 +51,6 @@ digraph G {
 
 <script type="bogus" id="sample1_text">
 digraph G {
-
 	subgraph cluster_0 {
 		style=filled;
 		color=lightgrey;
@@ -59,7 +58,6 @@ digraph G {
 		a0 -> a1 -> a2 -> a3;
 		label = "process #1";
 	}
-
 	subgraph cluster_1 {
 		node [style=filled];
 		b0 -> b1 -> b2 -> b3;
@@ -73,14 +71,10 @@ digraph G {
 	a3 -> a0;
 	a3 -> end;
 	b3 -> end;
-
 	start [shape=Mdiamond];
 	end [shape=Msquare];
 }
 </script>
-
-<!-- -->
-
 <script type="bogus" id="sample2_text">
 digraph "unix" {
 	graph [	fontname = "Helvetica-Oblique",
@@ -187,9 +181,6 @@ digraph "unix" {
 	"System V.2" -> "System V.3";
 }
 </script>
-
-<!-- -->
-
 <script type="bogus" id="sample3_text">
 digraph prof {
 	ratio = fill;
@@ -342,9 +333,6 @@ sprintf [color="0.650 0.200 1.000"];
 term [color="0.650 0.200 1.000"];
 }
 </script>
-
-<!-- -->
-
 <script type="bogus" id="sample4_text">
 digraph finite_state_machine {
 	rankdir=LR;
@@ -367,14 +355,10 @@ digraph finite_state_machine {
 	LR_8 -> LR_5 [ label = "S(a)" ];
 }
 </script>
-
-<!-- -->
-
 <script type="bogus" id="sample5_text">
 digraph g{
   rankdir=LR;
   "webgraphviz" -> "@" -> "gmail" -> "." -> "com"
 }
 </script>
-
 </html>
